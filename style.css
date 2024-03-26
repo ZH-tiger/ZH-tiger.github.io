@@ -1,0 +1,193 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+body {
+	/* background: url('../img/One.png') no-repeat; */
+	/* background-image: url('../img/One.png') ; */
+    background-size: 100%;
+    margin: 0;
+}
+.page{   
+	width: 100%;
+	height: 100%;
+	/* background-color: darkgray; */
+}
+.header{    /* 顶部标题栏 */
+	position: relative;
+	width: 100%;
+	height: 440px;
+	/* background: url('../img/d.webp') no-repeat; */  
+	/* 在div中插入img元素,使img尺寸等于div尺寸,而不是设置背景图片 */
+	/* background-size: 100%; */     /* 使背景自适应填充整个容器,不会出现重复平铺 */
+}
+.header img{
+	position: absolute;      /* 设置定位是为了使标题字体浮于图片之上 */
+}
+.header p{
+	position: absolute;
+	left: 50%;    /* 将<p>元素的左侧置于<div>元素的中心 */
+	top: 40%;     /*将<p>元素的上侧置于<div>元素的40%处 */
+	transform: translate(-50%, -50%);     /* 将 <p> 元素自身的宽度和高度的一半作为偏移量，使其在水平和垂直方向上居中对齐。 */ 
+	z-index: 2;    /* 使字体位于图片之上 */   
+	font-size: 45px;
+	color: #ffffff;
+}
+.main{
+	width: 880px;
+	/* background-color: aquamarine; */
+	margin: 0 auto;
+	overflow: hidden;   /* 在父级元素设置,使子级元素margin不会传递 */
+}
+.main .nav{      /* 装五个标签的盒子 */
+	width: 180px;
+	height: 15px;
+	line-height: 20px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	/* background-color: rgba(0, 0, 0, 0.4); */
+}
+.main .nav:after{      /* 消除五个标签盒子下方的浮动 */
+	content: "";
+	display: block;
+	clear: both;
+}
+.main .nav a{        /* 五个标签的设置 */
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	/* border-radius: 2px;   /* 圆角边框 */ */
+	margin-right: 2px;
+	color: black;
+}
+.main .nav a:nth-of-type(1){    
+	border: 2px solid gainsboro;
+	margin: 0 3px;
+}
+.main .nav a:nth-of-type(2){
+	border: 2px solid gainsboro;
+	margin:0 3px;
+}
+.main .nav a:nth-of-type(3){
+	border: 2px solid gainsboro;
+	margin:0 3px;
+}
+.main .nav a:nth-of-type(4){
+	border: 2px solid gainsboro;
+	margin:0 3px;
+}
+.main .nav a:nth-of-type(5){
+	border: 2px solid gainsboro;
+	margin:0 3px;
+}
+
+.main .picture{        /* 放置所有图片的盒子 */
+	width: 880px;
+	margin: 0 auto;
+	/* background-color: bisque; */
+}
+.main .picture:after{    /* 消除浮动的影响 */
+	content: "";
+	display: block;
+	clear: both;
+}
+.img{           /* 每个放置图片的盒子尺寸大小 */
+	/* display: flex; */
+	margin: 3px;
+	width: 287px;
+	height: 175px;
+	position: relative;
+}
+.tu{          /* 设置每个图片的尺寸 */
+	width: 100%;
+	height: 100%;
+}
+.img .cover{            /* 图片的遮盖层 */
+	position: absolute;
+	top: 0;
+	width: 100%;       /* 引用上一级设置的width */
+	height: 100%;         /* 垂直居中 */
+	line-height: 160px;    /* 垂直居中 */
+	text-align: center;    /* 水平居中 */
+	color: #ffffff;
+	font-size: 23px;
+	background-color: rgba(0, 128, 128, 0.5);
+	/* display: none; */
+	opacity: 0;
+	box-sizing: border-box;     /* 让元素的实际宽度和高度包括边框和内边距 */
+	border: 1px solid white;
+	transition: 1s;
+}
+.img:hover .cover{         
+	/* display: block;*/    /* 不能用block,因为无法使用过渡效果 */
+	opacity: 1;       /* 使用透明度,通过transition过渡效果,实现透明度从0到1 */
+}
+.text{           /* 遮盖层的文本 */
+	margin: 0 auto;
+	font-size: 24px;
+    }
+.line{          /* 遮盖层的线框 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 97%;
+	height: 95%;
+	border: 2px solid #ffffff;
+	}
+
+.footer{           /* 底部栏 */
+	width: 100%;
+	height: 140px;
+	background-color: black;
+	/* margin: 0 auto; */     /* 元素位置居中 */
+	color: darkgray;
+	text-align: center;
+	overflow: hidden;      /* 消除父级传递 */
+}
+.footer p{
+	/* position: absolute; */
+	/* top: 10px; */      /* 不能用定位,否则只能通过top,left等手动确认居中 */
+	margin-top: 20px;
+	display: block;
+	width: auto;
+	height: 20px;
+	/* background-color: antiquewhite; */
+}
+
+.user{        /* 底部用户选项栏 */
+	/* background-color: cadetblue; */
+	width: 280px;
+	height: 20px;
+	margin: 0 auto;  
+	margin-top: 10px;
+}
+.user a{
+	color: darkgray;
+	margin:3px;
+	text-align: center;    /* 文本居中 */
+}
+.user:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.l{
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	margin-top: 8px;
+	background-color: antiquewhite;
+}
+.logo{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	margin: 3px;
+}
