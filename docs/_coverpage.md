@@ -1,10 +1,10 @@
 <!-- _coverpage.md -->
 
-![图片alt](/img/a.webp "a")
+![图片alt](/img/hero.png "a")
 
-# docsify <small>3.5</small>
+# Tiger的个人博客 <small>3.5</small>
 
-> 一个神奇的文档网站生成器。
+> 欢迎光临。
 
 <!-- - 简单、轻便 (压缩后 ~21kB)
 - 无需生成 html 文件
@@ -12,3 +12,8 @@
  -->
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](/README.md)
+
+![](/img/d2.jpg)
+
+
+
